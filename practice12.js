@@ -2,6 +2,6 @@
 
 const arr = [3, 32, 6, 75, 23, 45, 66];
 
-const findEven = (arr) => arr.filter((value) => value % 2 === 0 && value);
+const findEven = (arr) => arr.filter((value) => value % 2 === 0).length;
 
 console.log(findEven(arr));

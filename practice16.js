@@ -2,7 +2,10 @@
 
 const arr = [3, 32, 6, 76, 23, 45, 63];
 
+// const checkLargestEvenNum = (arr) =>
+//   arr.reduce((prev, curr) => (curr > prev && curr % 2 === 0 ? curr : prev));
+
 const checkLargestEvenNum = (arr) =>
-  arr.reduce((prev, curr) => (curr > prev && curr % 2 === 0 ? curr : prev));
+  Math.max(...arr.filter((value) => value % 2 === 0));
 
 console.log(checkLargestEvenNum(arr));

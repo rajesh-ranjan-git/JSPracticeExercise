@@ -8,4 +8,4 @@ const noOfEvenValues = (num) => {
   return evenArr.length;
 };
 
-console.log(noOfEvenValues(46));
+console.log(noOfEvenValues(9));
