@@ -1,3 +1,3 @@
 # JS Practice Exercises
 
-> This is practice set of common JS concepts.
+## This is practice set of common JS concepts.
