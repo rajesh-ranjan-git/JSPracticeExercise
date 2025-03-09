@@ -281,7 +281,7 @@ console.log(isValidNumber(" ")); // false
 // 1. Find the First Non-Repeating Character in a String
 // 📌 Problem: Given a string, find the first non-repeating character and return it. If all characters repeat, return null.
 
-const str = "javascript";
+const str1 = "javascript";
 // Output: "j"
 
 const firstUniqueChar = (str) => {
@@ -301,11 +301,11 @@ console.log(firstUniqueChar("aabbcc")); // null
 // 2. Find Pairs in an Array That Sum to a Target
 // 📌 Problem: Given an array of numbers and a target sum, return all unique pairs that add up to the target.
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const target = 10;
+const arr16 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const target1 = 10;
 // Output: [[1, 9], [2, 8], [3, 7], [4, 6]]
 
-const findPairs = (arr, target) => {
+const findPairs1 = (arr, target) => {
   let pairs = [];
   let seen = new Set();
 
@@ -320,14 +320,14 @@ const findPairs = (arr, target) => {
   return pairs;
 };
 
-console.log(findPairs([1, 2, 3, 4, 5, 6, 7, 8, 9], 10));
+console.log(findPairs1(arr16, target1));
 // ✅ O(n) complexity using a Set for faster lookup.
 // ✅ Avoids duplicate pairs by checking before adding.
 
 // 3. Find Missing Numbers in a Given Range
 // 📌 Problem: Given an array of numbers from 1 to N with missing elements, return the missing numbers.
 
-const arr = [1, 3, 4, 7, 9];
+const arr17 = [1, 3, 4, 7, 9];
 const n = 10;
 // Output: [2, 5, 6, 8, 10]
 
@@ -336,13 +336,13 @@ const findMissingNumbers = (arr, n) => {
   return [...Array(n).keys()].map((i) => i + 1).filter((num) => !set.has(num));
 };
 
-console.log(findMissingNumbers([1, 3, 4, 7, 9], 10));
+console.log(findMissingNumbers(arr17, n));
 // ✅ Uses Set for O(1) lookups and Array methods to generate missing values.
 
 // 4. Flatten a Deeply Nested Array Without Using .flat()
 // 📌 Problem: Convert a deeply nested array into a single-level array.
 
-const arr = [1, [2, [3, [4, 5]]]];
+const arr18 = [1, [2, [3, [4, 5]]]];
 // Output: [1, 2, 3, 4, 5]
 
 // Solution (Recursive):
@@ -353,13 +353,13 @@ const flattenArray = (arr) =>
     []
   );
 
-console.log(flattenArray([1, [2, [3, [4, 5]]]]));
+console.log(flattenArray(arr18));
 // ✅ Uses recursion and reduce() for an elegant solution.
 
 // 5. Find the Most Frequent Element in an Array
 // 📌 Problem: Find the element that appears the most times in an array.
 
-const arr = [3, "apple", 3, "banana", "apple", "apple"];
+const arr19 = [3, "apple", 3, "banana", "apple", "apple"];
 // Output: "apple"
 
 const mostFrequentElement = (arr) => {
@@ -371,16 +371,16 @@ const mostFrequentElement = (arr) => {
   return Object.keys(count).reduce((a, b) => (count[a] > count[b] ? a : b));
 };
 
-console.log(mostFrequentElement([3, "apple", 3, "banana", "apple", "apple"]));
+console.log(mostFrequentElement(arr19));
 // ✅ Uses reduce() for efficient counting.
 
 // 6. Find the Longest Word in a Sentence
 // 📌 Problem: Return the longest word from a given sentence.
 
-const sentence = "JavaScript is a powerful language";
+const sentence1 = "JavaScript is a powerful language";
 // Output: "JavaScript"
 
-const longestWord = (str) =>
+const longestWord1 = (str) =>
   str
     .split(" ")
     .reduce(
@@ -388,13 +388,13 @@ const longestWord = (str) =>
       ""
     );
 
-console.log(longestWord("JavaScript is a powerful language"));
+console.log(longestWord1(sentence1));
 // ✅ Uses reduce() to track the longest word.
 
 // 7. Find Duplicate Elements in an Array
 // 📌 Problem: Find duplicate values in an array.
 
-const arr = [1, 2, 3, 4, 2, 3, 5, 6, 1];
+const arr20 = [1, 2, 3, 4, 2, 3, 5, 6, 1];
 // Output: [1, 2, 3]
 
 const findDuplicates = (arr) => {
@@ -408,18 +408,18 @@ const findDuplicates = (arr) => {
   return [...duplicates];
 };
 
-console.log(findDuplicates([1, 2, 3, 4, 2, 3, 5, 6, 1]));
+console.log(findDuplicates(arr20));
 // ✅ Uses two Sets for optimal performance.
 
 // 8. Reverse Words in a Sentence Without Reversing Characters
 // 📌 Problem: Reverse the order of words in a sentence.
 
-const sentence = "Hello world from JavaScript";
+const sentence2 = "Hello world from JavaScript";
 // Output: "JavaScript from world Hello"
 
 const reverseWords = (str) => str.split(" ").reverse().join(" ");
 
-console.log(reverseWords("Hello world from JavaScript"));
+console.log(reverseWords(sentence2));
 // ✅ Uses split(), reverse(), and join() efficiently.
 
 // 9. Implement a Simple Debounce Function
@@ -455,8 +455,8 @@ const throttle = (func, limit) => {
 };
 
 // Usage
-const log = throttle(() => console.log("Throttled!"), 1000);
-log();
-log();
-log(); // Executes only once per second
+const log1 = throttle(() => console.log("Throttled!"), 1000);
+log1();
+log1();
+log1(); // Executes only once per second
 // ✅ Used in scroll events and API calls.
