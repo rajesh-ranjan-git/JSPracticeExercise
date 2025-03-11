@@ -1,4 +1,4 @@
-// 2. Find the missing number from array
+// 3. Sort 2 arrays
 
 const arr1 = [1, 2, 5, 9];
 const arr2 = [3, 4, 5, 6, 9];
